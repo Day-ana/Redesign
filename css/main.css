@@ -1,0 +1,356 @@
+/*@import "compass/css3";*/
+/**
+* Conditional Media Query Mixin
+* by @sheiko (http://dsheiko.com)
+* 
+* The problem this mixin solves is explained there 
+* http://css-tricks.com/conditional-media-query-mixins/
+*
+* https://github.com/dsheiko
+* MIT license: http://www.opensource.org/licenses/mit-license.php
+*/
+/* Predefined Break-points*/
+/* The mdia mixin*/
+body {
+  font: 100% Helvetica Neue-Medium, "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*height:100%;*/
+  overflow: hidden;
+  border-bottom: 2px solid purple;
+  /*LARGE*/
+  /*MEDIUM*/
+  /*SMALL*/ }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
+    body {
+      border-bottom: 2px solid purple; } }
+  @media only screen and (min-width: 961px) and (max-width: 1260px) {
+    body {
+      border-bottom: 2px solid yellow; } }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    body {
+      border-bottom: 2px solid red; } }
+  @media only screen and (max-width: 480px) {
+    body {
+      border-bottom: 2px solid fuchsia; } }
+
+/*Backgrounds*/
+.pt-page-ontop {
+  z-index: 999; }
+
+.pt-page h1 {
+  position: absolute;
+  font-weight: 300;
+  font-size: 4.4em;
+  line-height: 1;
+  letter-spacing: 6px;
+  margin: 0;
+  top: 1%;
+  width: 100%;
+  text-align: center;
+  word-spacing: -0.3em; }
+
+.pt-page-1 {
+  background: #28b58b;
+  background-image: url("../img/bg_main.png"), url("../img/bg_main_2.png");
+  background-repeat: repeat-y, repeat;
+  overflow: scroll; }
+  @media only screen and (max-width: 480px) {
+    .pt-page-1 {
+      width: 100%;
+
+    } 
+  }
+
+.pt-page-2 {
+  background: #1f8d6c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1f8d6c), color-stop(100%, #307b9e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #1f8d6c 0%, #307b9e 100%);
+  overflow: scroll; 
+}
+
+.pt-page-3 {
+  background: #28b58b;
+  background-image: url("../img/bg_red.png"), url("../img/bg_red2.png");
+  background-repeat: repeat-y, repeat; }
+
+.pt-page-4 {
+  background: rgba(255, 0, 0, 0.63);
+  /*background: url("../img/bg_video.png") #000 no-repeat center center fixed;*/ }
+
+.pt-page-5 {
+  background: #28b58b;
+  background-image: url("../img/bg_green.png"), url("../img/bg_green2.png");
+  background-repeat: repeat-x, repeat; }
+
+.pt-page-6 {
+  background: #28b58b;
+  background-image: url("../img/bg_purp.png"), url("../img/bg_purp_2.png");
+  background-repeat: repeat-x, repeat;
+  box-shadow: inset 1px 10px 200px #000; }
+
+header {
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  /*// height: 50%;*/
+  /*background-image: url("../assets/pexels_universe.png");*/
+  background-image: url("../assets/pexels_sunset.jpeg");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-position: 50% 62.700000000000003%;
+  box-shadow: #421700 21px 10px 92px;
+  border-bottom: 1px solid rgba(252, 189, 96, 0.46);
+  /*MEDIUM*/ }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    header {
+      background-size: 200% 100%; } }
+  @media only screen and (max-width: 480px) {
+    header {
+      background-size: 200% 100%; } }
+  header section {
+    display: flex;
+    border-bottom: 1px solid rgba(191, 147, 81, 0.43);
+    box-shadow: #421700 21px 10px 92px; }
+    header section h2.universe-header {
+      margin: 1.2em auto 30px;
+      border: 1px solid rgba(252, 189, 96, 0.46);
+      background-color: rgba(86, 43, 43, 0.21);
+      padding: 11px 20px;
+      line-height: 1;
+      color: #ffffff;
+      font-size: 766%;
+      font-weight: lighter;
+      text-align: center; }
+      @media only screen and (max-width: 480px) {
+        header section h2.universe-header {
+          margin: 0.75em auto 30px;
+          font-size: 600%; } }
+  header aside {
+    /*/MEDIUM/*/
+    font-size: 245%;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    /*text-align: center;*/
+    padding: 20px 0;
+    /*width:100%;*/
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (min-width: 481px) and (max-width: 960px) {
+      header aside {
+        /*border-bottom:px solid blue;*/ } }
+
+.flex-bucket {
+  display: flex;
+  border-radius: 10px; }
+  .flex-bucket .hi {
+    font: italic 100 14px/150%  Helvetica, sans-serif;
+    color: #FFF;
+    border: 1px solid rgba(137, 137, 234, 0.65);
+    margin: 9% auto 0;
+    text-align: left;
+    /*height: 30%;*/
+    width: 30%;
+    vertical-align: middle;
+    justify-content: flex-start; }
+    @media only screen and (max-width: 480px) {
+      .flex-bucket .hi {
+        width: 80%; } }
+
+/*STYLES FOR CONTACT ME PAGE*/
+.flex-bucket-contact {
+  /*display: flex;*/
+  /*  margin-top:100px;
+  height: 100%;
+  border:1px solid red;
+  justify-content:center;
+  flex-wrap:nowrap; 
+  flex-direction:column;*/ }
+  .flex-bucket-contact .contact-bucket {
+    height: 70%;
+    /*border:1px solid rgba(141, 150, 0, 0.45);*/
+    border-bottom: none;
+    border-radius: 4px 4px 0 0; }
+    .flex-bucket-contact .contact-bucket p {
+      text-align: center;
+      letter-spacing: 0.05em; }
+
+/*Responsive contact page*/
+@media only screen and (min-width: 961px) and (max-width: 1260px) {
+  video {
+    right: -500px; }
+  #video-bucket {
+    margin: 11em 2em 0; }
+  border-bottom: 2px solid yellow; }
+
+/*MEDIUM*/
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  video {
+    right: -1000px; }
+  #video-bucket {
+    margin: 8em 0em 0; } }
+
+/*SMALL*/
+@media only screen and (max-width: 480px) {
+  .pt-page-4 {
+    background-color: red;
+    background: url("../img/bg_video_small.png") #000 no-repeat -10em 0 fixed;
+    height: 120%; }
+    .pt-page-4 #bgvid {
+      display: none; }
+    .pt-page-4 video {
+      right: -1200px; }
+    .pt-page-4 #video-bucket {
+      margin: 2.5em 0em 0;
+      padding: 0.0em;
+      border: none; } }
+
+@media only screen and (max-width: 480px) {
+  form {
+    flex-direction: column; }
+    form p {
+      display: block; }
+  label {
+    display: block;
+    width: auto;
+    text-align: left; }
+  form > div {
+    width: auto;
+    border: none; }
+  form > div + div {
+    margin-left: 0;
+    margin-bottom: 1em;
+    order: -1; }
+  input {
+    width: 100%; }
+  button {
+    display: none; } }
+
+/*STYLES FOR ABOUT ME PAGE*/
+/*STYLES FOR ABOUT ME PAGE*/
+.about-bucket {
+  font: italic 100 14px/150% Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid #fff; }
+  .about-bucket .about-intro {
+    max-width: 40%;
+    padding: 0 30px; }
+  .about-bucket .moi {
+    border: 1px solid yellow;
+    text-indent: -9999px;
+    background-image: url("../img/moi.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -o-background-size: 100% 100%, auto;
+    -moz-background-size: 100% 100%, auto;
+    -webkit-background-size: 100% 100%, auto;
+    background-size: 100% 100%, auto;
+    height: 250px;
+    width: 250px;
+    border: 1px solid yellow;
+    border-radius: 50%; }
+
+.menu-iconz {
+  position: absolute;
+  right: -1em;
+  z-index: 5;
+  top: -2em; }
+  @media only screen and (max-width: 480px) {
+    .menu-iconz {
+      display: none; } }
+
+span.si-icon {
+  /*border:1px solid red;*/ }
+
+@media only screen and (max-width: 480px) {
+  .intro {
+    border: 1px solid rgba(109, 109, 73, 0.45);
+    height: 100%;
+    display: none; } }
+
+.menu-wrap {
+  position: absolute;
+  z-index: 2;
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
+  padding: 1em 5em 1em 1em;
+  font-size: 1.15em;
+  -webkit-transform: translate3d(-320px, 0, 0);
+  transform: translate3d(640px, 0, 0);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  right: 0px;
+  top: 0px;
+  /*MEDIUM*/ }
+  .menu-wrap a {
+    color: #fff; }
+  .menu-wrap:hover {
+    outline: 1px solid red; }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .menu-wrap {
+      width: 100%; } }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .menu-wrap .icon-list {
+      /*border:1px solid red;*/
+      justify-content: space-between;
+      /*width: 110%;*/ } }
+  @media only screen and (max-width: 480px) {
+    .menu-wrap {
+      /*border:1px solid red;*/
+      width: 100%;
+      height: 50px;
+      padding: 0;
+      left: 0%; }
+      .menu-wrap .menu {
+        border: 1px solid rgba(161, 70, 32, 0.41);
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        height: 50px; }
+        .menu-wrap .menu .icon-list a {
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          width: 20%;
+          float: left; }
+          .menu-wrap .menu .icon-list a .fa-fw {
+            width: 91%;
+            font-size: 1.1rem; }
+          .menu-wrap .menu .icon-list a span {
+            display: none; } }
+
+/**
+ * Usage examples
+ */
+.section {
+  border: 2px solid #777;
+  padding: 40px;
+  background: silver; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
+    .section {
+      border: 2px dotted #000; } }
+  @media only screen and (min-width: 961px) and (max-width: 1260px) {
+    .section {
+      background: red;
+      color: white; } }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .section {
+      background: green;
+      color: white; } }
+  @media only screen and (max-width: 480px) {
+    .section {
+      background: blue;
+      color: white; } }
