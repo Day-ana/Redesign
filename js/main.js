@@ -151,26 +151,6 @@
             ease: Elastic.easeOut
         }, 0.4);
 
-
-        var portfolioAction = document.getElementById("portfolioClick");
-
-        function animatePortfolio(){
-                // portfolioAction.classList.remove("expand");
-
-            portfolioAction.addEventListener("click", function(){
-               
-                this.classList.add("expand");
-
-                // alert("clicked");
-                this.style.width="100%";
-                this.style.height   ="100%";
-
-            }, false)
-
-        }
-
-        animatePortfolio();
-
     };
 
 })();

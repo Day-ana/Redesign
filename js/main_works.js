@@ -48,14 +48,6 @@
 		};
 	}
 
-	function updateFromThumby( img ){
-		var imageToUpdate = document.getElementById('UpdateFromThumby');
-		
-
-
-
-	}
-
 	function nextSibling(el) {
 		var nextSibling = el.nextSibling;
 		while(nextSibling && nextSibling.nodeType != 1) {
@@ -158,7 +150,9 @@
 			//Removing scroll on Click - Custom functionality
 			pageContainer.style.overflow = "hidden";
 
-
+			//Calling the hover mechanics	
+			updateFromThumby(item);
+				
 				if(clickEvent === 'click') {
 					ev.preventDefault();
 					self._openItem(ev, item);
@@ -169,6 +163,9 @@
 			});
 
 		});
+
+
+
 
 		// close expanded image
 		this.closeCtrl.addEventListener('click', function() {
@@ -264,6 +261,26 @@
 		});
 	};
 
+	function updateFromThumby( img ){
+		
+		console.log(img);
+		var imageToUpdate = document.getElementById('UpdateFromThumby');
+		// alert('updateFromThumby');
+		var self = this;
+		var updateWorksImg = document.getElementById('updateWorksImg');
+		var all_img = updateWorksImg.getElementsByTagName('img');
+		
+		// console.log(all_img);
+		// console.log(all_img[1]);
+
+		// all_image.forEach(function( item ){
+
+		// 	console.log(item);
+
+		// });
+
+	}	
+
 	/**
 	 * create/set the original/large image element
 	 */
@@ -271,8 +288,6 @@
 		console.log(src);
 
 		if( !src ) {
-		console.log(src + ' not src ');
-
 			this.originalImg = document.createElement('img');
 			this.originalImg.className = 'original';
 			this.originalImg.style.opacity = 0;
