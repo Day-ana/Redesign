@@ -151,7 +151,7 @@
 			pageContainer.style.overflow = "hidden";
 
 			//Calling the hover mechanics	
-			updateFromThumby(item);
+			// updateFromThumby(item);
 				
 				if(clickEvent === 'click') {
 					ev.preventDefault();
@@ -285,7 +285,7 @@
 	 * create/set the original/large image element
 	 */
 	GridFx.prototype._setOriginal = function(src) {
-		console.log(src);
+		// console.log(src);
 
 		if( !src ) {
 			this.originalImg = document.createElement('img');
