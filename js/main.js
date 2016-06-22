@@ -50,7 +50,7 @@
 
             var clickMenu = document.getElementById('click-menu');
                //Simulate click on Menu
-               clickMenu.click();
+               // clickMenu.click();
         }
 
         if(mobilecheck()){

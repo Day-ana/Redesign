@@ -459,7 +459,7 @@ button.pt-trigger {
 /*Pages Styles*/
 /*Home*/
 
-.intro{ width: 50%; top: 40%; left:35%;  height:20%; position: relative;}
+.intro{ width: 50%; top: 40%; left:35%;  height:20%; position: relative; border:1px solid red;}
 .intro-buttons{
 border: 1px solid rgba(255, 255, 255, 0.31);
 width: 140px;
@@ -478,6 +478,21 @@ position: absolute;
 .intro div:nth-child(2){ left: 220px;}
 .intro div:nth-child(3){ left: 440px;}
 
+  .lets-build-something{
+    font-size: 200%;
+    font-weight: lighter;
+    letter-spacing: 2px;
+
+    /*border:1px solid gold;*/
+  }
+  .lets-build-something strong{color:#FBAF0B; font-weight: 600;color: rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1)}
+
+.lets-build-something .inner-bucket{
+  /*border:1px solid red;*/
+  width: 170px;
+  margin: 60px auto 0;
+}
 
 /* 1- positionning the 2 divs */
 form {

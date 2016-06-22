@@ -134,17 +134,29 @@ header {
         /*border-bottom:px solid blue;*/ } }
 
 .flex-bucket {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  border-radius: 10px; }
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  border-radius: 10px; 
+  align-items: center;
+
+}
   .flex-bucket .hi {
     font: italic 100 14px/150%  Helvetica, sans-serif;
     color: #FFF;
-    border: 1px solid rgba(137, 137, 234, 0.65);
+    border: 1px solid rgba(137, 137, 234, 0.30);
     margin: 9% auto 0;
     text-align: left;
-    /*height: 30%;*/
-    width: 30%;
-    vertical-align: middle; }
+    width: 40%;
+    justify-content: flex-start;
+    vertical-align: middle; 
+  }
+
     @media only screen and (max-width: 480px) {
       .flex-bucket .hi {
         width: 80%; } }
