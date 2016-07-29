@@ -185,7 +185,11 @@ header{
                 font-size: 766%;
                 font-weight: lighter;
                 text-align: center;
-                  
+                  span{
+                    display: block;
+                    font-size: 50px;
+                    margin-top: 10px;
+                  }
                     @include media( "screen", "<minWidth" ){
                       margin: 0.75em auto 30px;
                       font-size: 600%;

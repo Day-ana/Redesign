@@ -56,9 +56,7 @@ body {
   @media only screen and (max-width: 480px) {
     .pt-page-1 {
       width: 100%;
-
-    } 
-  }
+      /*// color: white;*/ } }
 
 .pt-page-2 {
   background: #1f8d6c;
@@ -74,8 +72,10 @@ body {
   background: -ms-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
   /* IE10+ */
   background: linear-gradient(135deg, #1f8d6c 0%, #307b9e 100%);
-  overflow: scroll; 
-}
+  /* W3C */
+  /*background-image: url("../img/bg_grayish.png"), url("../img/bg_grayish2.png");*/
+  /*background-repeat: repeat-x, repeat;*/
+  overflow: scroll; }
 
 .pt-page-3 {
   background: #28b58b;
@@ -129,6 +129,10 @@ header {
       font-size: 766%;
       font-weight: lighter;
       text-align: center; }
+      header section h2.universe-header span {
+        display: block;
+        font-size: 50px;
+        margin-top: 10px; }
       @media only screen and (max-width: 480px) {
         header section h2.universe-header {
           margin: 0.75em auto 30px;
