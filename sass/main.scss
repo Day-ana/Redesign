@@ -221,7 +221,8 @@ header{
 
 .flex-bucket{
   display: flex;
-  border-radius: 10px;
+        justify-content: center;
+  
     .hi{
         font: italic 100 14px/150%  Helvetica, sans-serif;
         color:#FFF;
@@ -231,12 +232,62 @@ header{
         /*height: 30%;*/
         width: 30%;
         vertical-align: middle;
-        justify-content: flex-start;
-        
           @include media( "screen", "<minWidth" ){
           width:80%;
         };
   }
+  
+    .laptop{
+      border: 10px solid #fff;
+        width: 500px;
+        height: 500px;
+        border: 3px solid rgba(189, 157, 9, 0.46);
+        width: 860px;
+        height: 600px;
+        margin-top: 80px;;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        background-image: url("../img/computer.png");
+
+
+    }
+
+  
+
+}
+
+.parallax {
+    /* The image used */
+      background-image: url("../assets/pexels_universe.png");
+    /*background-image: url("img_parallax.jpg");*/
+
+    /* Set a specific height */
+    min-height: 1000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.digital-background{
+      margin: 100px 0;
+      height: 770px;
+      background-image: url("../assets/pexels_universe.png");
+      background-repeat: repeat;
+      background-size: 100%;
+      box-shadow: #421700 21px 10px 92px;
+      border-bottom: 1px solid rgba(252, 189, 96, 0.46);
+      /*MEDIUM*/
+      @include media( "screen", ">minWidth", "<bp1Width" ){
+       background-size: 200% 100%;
+      };
+      @include media( "screen", "<minWidth" ){
+          background-size: 200% 100%;
+      };
+
 }
 
 
@@ -252,7 +303,7 @@ header{
   
   .contact-bucket{
     height: 70%;
-    /*border:1px solid rgba(141, 150, 0, 0.45);*/
+    border:1px solid rgba(141, 150, 0, 0.45);
     border-bottom:none;
     border-radius:4px 4px 0 0;
     p{ text-align:center; letter-spacing:0.05em;}
