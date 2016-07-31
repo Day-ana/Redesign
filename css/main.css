@@ -171,17 +171,35 @@ header {
       .flex-bucket .hi {
         width: 80%; } }
   .flex-bucket .laptop {
-    border: 10px solid #fff;
-    width: 500px;
-    height: 500px;
-    border: 3px solid rgba(189, 157, 9, 0.46);
-    width: 860px;
+    display: flex;
+    /*justify-content:center;*/
+    width: 960px;
     height: 600px;
-    margin-top: 80px;
+    margin-top: 110px;
+    /*padding: 350px 0 0 0 ;*/
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
-    background-image: url("../img/computer.png"); }
+    background-position: center 60px;
+    background-size: 50%;
+    /*background-image: url("../img/computer.png");*/
+    font-weight: 100;
+    letter-spacing: 0.1em; }
+    .flex-bucket .laptop div {
+      width: 33%;
+      border: 1px solid rgba(189, 157, 9, 0.3);
+      padding: 20px;
+      margin: 20px;
+      padding-top: 210px;
+      height: 500px; }
+      .flex-bucket .laptop div h2 {
+        font-weight: lighter;
+        text-align: center;
+        font-size: 220%; }
+    .flex-bucket .laptop .design {
+      background: url("../img/icon_design.png") no-repeat center 25px; }
+    .flex-bucket .laptop .development {
+      background: url("../img/icon_dev.png") no-repeat center 25px; }
+    .flex-bucket .laptop .seo {
+      background: url("../img/icon_seo.png") no-repeat center 25px; }
 
 .parallax {
   /* The image used */
@@ -343,7 +361,8 @@ span.si-icon {
   .menu-wrap a {
     color: #fff; }
   .menu-wrap:hover {
-    outline: 1px solid red; }
+    /*outline:1px solid red;*/
+    background: rgba(0, 0, 0, 0.5); }
   @media only screen and (min-width: 481px) and (max-width: 960px) {
     .menu-wrap {
       width: 100%; } }
