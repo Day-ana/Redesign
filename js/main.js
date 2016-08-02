@@ -6,7 +6,7 @@
         //ok we loaded lets proceed
             okIReloaded();
 
-    }, 0);
+    }, 600);
 
 
     function okIReloaded() {
@@ -128,7 +128,7 @@
             vid.classList.toggle("stopfade");
             if (vid.paused) {
                 vid.play();
-                pauseButton.innerHTML = "Stoppit";
+                pauseButton.innerHTML = "Clickit";
             } else {
                 vid.pause();
                 pauseButton.innerHTML = "Play";

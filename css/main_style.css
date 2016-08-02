@@ -215,18 +215,13 @@ a {
 
 .pt-trigger {
     border: none;
-    font-size: 0.8rem;
-    font-weight: 200;
-    /*font-family: 'Jura', sans-serif;*/
-    
     margin: 0;
     line-height: 32px;
     height: 50px;
     letter-spacing: 1px;
     cursor: pointer;
     display: block;
-    /*box-shadow: 0px 1px 0 rgba(0, 205, 253, 0.19);*/
-    
+    text-transform: uppercase;
     border-bottom: 1px solid rgba(255, 255, 255, 0.11);
 }
 
@@ -433,18 +428,8 @@ button.pt-trigger {
     transition-duration: 0.9s;
 }
 .show-menu .icon-list a:hover {
-    /* -webkit-transition-duration: 0.9s; */
-    /* transition-duration: 0.9s; */
-    
     cursor: pointer;
-    /* -webkit-transition-duration: 0.9s; */
-    /* transition-duration: 0.9s; */
-    
     box-shadow: inset 5px 0px 18px 1px rgba(43, 43, 43, 0.25);
-    /* -webkit-transition-duration: 0.9s; */
-    /* transition-duration: 0.9s; */
-    
-    border-bottom: #fff 1px solid;
 }
 .show-menu .content::before {
     opacity: 1;
@@ -478,57 +463,6 @@ position: absolute;
 .intro div:nth-child(2){ left: 220px;}
 .intro div:nth-child(3){ left: 440px;}
 
-  .lets-build-something{
-    font-weight: lighter;
-    letter-spacing: 2px;
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
-    font-size: 240%;
-
-    /*border:1px solid gold;*/
-  }
-  .lets-build-something strong{color:#FBAF0B; font-weight: 600;color: rgba(0,0,0,0.6);
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.1)}
-
-.lets-build-something .inner-bucket{
-  width: 300px;
-  text-align: center;
-  font-size: 150%;
-}
-.main-button{
-    width: 260px;
-    margin:30px 50px 0;
-}
-
-.main-button a{
-  text-align: center;
-  color: #fff;
-  display: block;
-  border:1px solid #fff;
-  transition: background 0.1s;
-  background: rgba(0,0,0,0.2);
-  margin: 0 30px;
-  height: 70px;
-  font-size: 50%;
-  font-weight: lighter;
-  letter-spacing: 2px;
-  padding: 18px 0;
-}
-
-.main-button a:hover{
-    background: rgba(0,0,0,0.4);
-    color:#FBAF0B;
-    /*font-weight:200;*/
-
-}
-
-.font01{
-    font-weight: lighter;
-    letter-spacing: 2px;
-    font-size: 200%;
-}
-
 /* 1- positionning the 2 divs */
 form {
     display: flex;
@@ -561,29 +495,25 @@ textarea {
 
 form > div {
     padding: 1em;
-    /*background: #fff;*/
-    border: 1px solid gray;
-    border-radius: 4px;
+    border: 1px solid rgba(148, 59, 14, 0.56);
 }
 input,
 textarea {
     padding: .3em;
     border: 1px solid #555;
-    border-radius: 2px;
     font: 100% Helvetica Neue-Medium, "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    font-size: inherit;
     color:#fff;
   background: rgba(0,0,0,0.2);
   /*border-top:#aaa 1px solid;*/
   border:none;
-  border-bottom:rgba(26, 123, 94, 0.58) 1px solid;
+  border-bottom:1px solid rgba(148, 59, 14, 0.56);
   transition: background 0.5s;
 }
 input:hover,
 textarea:hover {
     background:rgba(174, 179, 27, 0.25);
-    border-bottom:rgba(26, 123, 94, 0.75) 1px solid;
+    border-bottom:1px solid rgba(148, 59, 14, 0.56);
 
 }
 input:focus,
@@ -596,7 +526,7 @@ input[type="submit"] {
     background: rgba(170, 191, 27, 0.34);
     border: none;
     color: #fff;
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     cursor: pointer;
     border: 1px solid rgba(236, 171, 93, 0.44);
     border-top: 1px solid rgba(117, 94, 94, 0.44);
@@ -605,7 +535,7 @@ input[type="submit"] {
 label {
     width: 5em;
     margin-right: .5em;
-    text-align: right;
+    text-align: left;
 }
 input[type="submit"] {
     margin-left: auto;
@@ -657,15 +587,14 @@ position: relative;
 }
 #video-bucket button {
     position: absolute;
-    bottom: -165px;
-    right: 47%;
+    bottom: -85px;
+    left: -1px;
     border:0;
-    padding: .4rem;
+    padding: 1em;
     margin: 1rem auto;
     font-size: 1.3rem;
-    background: rgba(255, 255, 255, 0.23);
+    background: rgba(0, 0, 0, 0.45);
     color: #fff;
-    border-radius: 3px;
     cursor: pointer;
     transition: .3s background;
 }

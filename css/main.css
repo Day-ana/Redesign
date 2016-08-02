@@ -33,6 +33,17 @@ body {
       border-bottom: 2px solid fuchsia; } }
 
 /*Backgrounds*/
+/*Fonts*/
+.font01 {
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 200%; }
+
+.font02 {
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 120%; }
+
 .pt-page-ontop {
   z-index: 999; }
 
@@ -155,6 +166,27 @@ header {
       header aside {
         /*border-bottom:px solid blue;*/ } }
 
+.lets-build-something {
+  font-weight: lighter;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  font-size: 240%; }
+  .lets-build-something strong {
+    color: #FBAF0B;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1); }
+  .lets-build-something .inner-bucket {
+    width: 300px;
+    text-align: center;
+    font-size: 150%;
+    /*MEDIUM*/ }
+    @media only screen and (min-width: 481px) and (max-width: 960px) {
+      .lets-build-something .inner-bucket {
+        width: 250px; } }
+
 .flex-bucket {
   display: flex;
   justify-content: center; }
@@ -170,7 +202,7 @@ header {
     @media only screen and (max-width: 480px) {
       .flex-bucket .hi {
         width: 80%; } }
-  .flex-bucket .laptop {
+  .flex-bucket .middle-bucket {
     display: flex;
     /*justify-content:center;*/
     width: 960px;
@@ -182,43 +214,68 @@ header {
     background-size: 50%;
     /*background-image: url("../img/computer.png");*/
     font-weight: 100;
-    letter-spacing: 0.1em; }
-    .flex-bucket .laptop div {
+    letter-spacing: 0.1em;
+    /*MEDIUM*/ }
+    @media only screen and (min-width: 481px) and (max-width: 960px) {
+      .flex-bucket .middle-bucket {
+        margin-top: 60px; } }
+    .flex-bucket .middle-bucket div {
       width: 33%;
       border: 1px solid rgba(189, 157, 9, 0.3);
       padding: 20px;
       margin: 20px;
       padding-top: 210px;
-      height: 500px; }
-      .flex-bucket .laptop div h2 {
+      height: 500px;
+      /*MEDIUM*/ }
+      @media only screen and (min-width: 481px) and (max-width: 960px) {
+        .flex-bucket .middle-bucket div {
+          width: 250px;
+          height: 600px; } }
+      .flex-bucket .middle-bucket div h2 {
         font-weight: lighter;
         text-align: center;
-        font-size: 220%; }
-    .flex-bucket .laptop .design {
+        font-size: 150%; }
+    .flex-bucket .middle-bucket .design {
       background: url("../img/icon_design.png") no-repeat center 25px; }
-    .flex-bucket .laptop .development {
+    .flex-bucket .middle-bucket .development {
       background: url("../img/icon_dev.png") no-repeat center 25px; }
-    .flex-bucket .laptop .seo {
+    .flex-bucket .middle-bucket .seo {
       background: url("../img/icon_seo.png") no-repeat center 25px; }
 
-.parallax {
-  /* The image used */
+.bottom-bucket {
+  height: 500px; }
+  .bottom-bucket .control {
+    width: 50%;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 420%; }
+    .bottom-bucket .control p {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 40px; }
+  .bottom-bucket .icomputer {
+    background: url("../img/icomputer_1.png") no-repeat center top;
+    background-size: 100%;
+    width: 500px; }
+
+.footer {
+  margin: 0;
+  height: 100px;
   background-image: url("../assets/pexels_universe.png");
-  /*background-image: url("img_parallax.jpg");*/
-  /* Set a specific height */
-  min-height: 1000px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: 100%;
+  box-shadow: #421700 21px 10px 92px;
+  justify-content: flex-start; }
+  .footer .copyright {
+    line-height: 65px;
+    padding: 20px; }
 
 .digital-background {
   margin: 100px 0;
-  height: 770px;
+  height: 700px;
   background-image: url("../assets/pexels_universe.png");
-  background-repeat: repeat;
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   box-shadow: #421700 21px 10px 92px;
   border-bottom: 1px solid rgba(252, 189, 96, 0.46);
   /*MEDIUM*/ }
@@ -228,6 +285,100 @@ header {
   @media only screen and (max-width: 480px) {
     .digital-background {
       background-size: 200% 100%; } }
+
+.main-button {
+  width: 260px;
+  margin: 30px 50px 0; }
+  .main-button a {
+    text-align: center;
+    padding: 17px 0 0 0;
+    color: #fff;
+    display: block;
+    border: 1px solid #fff;
+    transition: background 0.3s linear;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0 30px;
+    height: 70px;
+    font-size: 50%;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    /*MEDIUM*/ }
+    @media only screen and (min-width: 481px) and (max-width: 960px) {
+      .main-button a {
+        font-size: 40%;
+        padding: 20px 0 0 0;
+        width: 130px;
+        margin: 20px 0; } }
+  .main-button a:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: #FBAF0B; }
+
+/*Animated wipe Link http://codepen.io/rtrsmarian/pen/kXjZqo*/
+.link {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  height: 68px;
+  line-height: 66px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px;
+  position: relative; }
+  .link span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center; }
+
+.wipe, .slide, .opacity {
+  border: 2px solid #fff;
+  overflow: hidden; }
+
+.wipe {
+  transition: color 0.3s; }
+  .wipe::after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: " ";
+    position: absolute;
+    top: 0;
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateY(68px);
+    z-index: -1; }
+  .wipe:hover {
+    color: #FBAF0B; }
+    .wipe:hover::after {
+      transform: translateY(0px); }
+
+.underline {
+  border: 2px solid transparent; }
+  .underline::after {
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: #fff;
+    content: " ";
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .underline:hover::after {
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: #fff;
+    content: " ";
+    position: absolute;
+    top: 55px;
+    left: 0; }
 
 /*STYLES FOR CONTACT ME PAGE*/
 .flex-bucket-contact {
@@ -241,10 +392,9 @@ header {
   .flex-bucket-contact .contact-bucket {
     height: 70%;
     border: 1px solid rgba(141, 150, 0, 0.45);
-    border-bottom: none;
-    border-radius: 4px 4px 0 0; }
+    border-bottom: none; }
     .flex-bucket-contact .contact-bucket p {
-      text-align: center;
+      text-align: left;
       letter-spacing: 0.05em; }
 
 /*Responsive contact page*/
@@ -299,7 +449,6 @@ header {
     display: none; } }
 
 /*STYLES FOR ABOUT ME PAGE*/
-/*STYLES FOR ABOUT ME PAGE*/
 .about-bucket {
   font: italic 100 14px/150% Helvetica, sans-serif;
   display: flex;
@@ -308,8 +457,9 @@ header {
   height: 100%;
   border: 1px solid #fff; }
   .about-bucket .about-intro {
-    max-width: 40%;
-    padding: 0 30px; }
+    max-width: 50%;
+    padding: 0 30px;
+    line-height: 40px; }
   .about-bucket .moi {
     border: 1px solid yellow;
     text-indent: -9999px;
@@ -347,7 +497,6 @@ span.si-icon {
   position: absolute;
   z-index: 2;
   background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);
-  padding: 1em 5em 1em 1em;
   font-size: 1.15em;
   -webkit-transform: translate3d(-320px, 0, 0);
   transform: translate3d(640px, 0, 0);
@@ -355,6 +504,7 @@ span.si-icon {
   transition: transform 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  padding: 0.5em 4em 1em 1em;
   right: 0px;
   top: 0px;
   /*MEDIUM*/ }
@@ -365,7 +515,9 @@ span.si-icon {
     background: rgba(0, 0, 0, 0.5); }
   @media only screen and (min-width: 481px) and (max-width: 960px) {
     .menu-wrap {
-      width: 100%; } }
+      width: 100%;
+      /*margin-top: 40px;*/
+      /*padding-bottom:0;*/ } }
   @media only screen and (min-width: 481px) and (max-width: 960px) {
     .menu-wrap .icon-list {
       /*border:1px solid red;*/
