@@ -49,15 +49,16 @@ body {
 
 .pt-page h1 {
   position: absolute;
-  font-weight: 300;
-  font-size: 4.4em;
   line-height: 1;
   letter-spacing: 6px;
   margin: 0;
-  top: 1%;
+  top: 115px;
   width: 100%;
   text-align: center;
-  word-spacing: -0.3em; }
+  word-spacing: -0.3em;
+  font-size: 500%;
+  font-weight: 100;
+  text-align: center; }
 
 .pt-page-1 {
   background: #28b58b;
@@ -70,22 +71,8 @@ body {
       /*// color: white;*/ } }
 
 .pt-page-2 {
-  background: #1f8d6c;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1f8d6c), color-stop(100%, #307b9e));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #1f8d6c 0%, #307b9e 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #1f8d6c 0%, #307b9e 100%);
-  /* W3C */
-  /*background-image: url("../img/bg_grayish.png"), url("../img/bg_grayish2.png");*/
-  /*background-repeat: repeat-x, repeat;*/
+  background-image: url("../img/bg_blue_green.png"), url("../img/bg_blue_green2.png");
+  background-repeat: repeat-x, repeat;
   overflow: scroll; }
 
 .pt-page-3 {
@@ -450,16 +437,20 @@ header {
 
 /*STYLES FOR ABOUT ME PAGE*/
 .about-bucket {
-  font: italic 100 14px/150% Helvetica, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  border: 1px solid #fff; }
+  border: 1px solid #fff;
+  padding: 0 100px;
+  /*MEDIUM*/ }
   .about-bucket .about-intro {
     max-width: 50%;
-    padding: 0 30px;
-    line-height: 40px; }
+    padding: 30px;
+    position: absolute;
+    left: 500px;
+    top: 200px;
+    line-height: 38px;
+    font-size: 24px;
+    border: 1px solid rgba(255, 0, 0, 0.28);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 60px 10px rgba(0, 0, 0, 0.29); }
   .about-bucket .moi {
     border: 1px solid yellow;
     text-indent: -9999px;
@@ -470,10 +461,39 @@ header {
     -moz-background-size: 100% 100%, auto;
     -webkit-background-size: 100% 100%, auto;
     background-size: 100% 100%, auto;
-    height: 250px;
-    width: 250px;
-    border: 1px solid yellow;
-    border-radius: 50%; }
+    height: 350px;
+    width: 350px;
+    border: 1px solid rgba(255, 0, 0, 0.28);
+    border-radius: 50%;
+    box-shadow: 1px 1px 60px 10px rgba(0, 0, 0, 0.29);
+    /* margin: 0 auto 100px; */
+    position: absolute;
+    top: 300px; }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .about-bucket .about-intro {
+      left: 100px;
+      top: 400px;
+      max-width: 80%;
+      height: 411px;
+      font-size: 24px;
+      line-height: 26px; }
+    .about-bucket .moi {
+      height: 300px;
+      width: 300px;
+      top: 100px;
+      left: 30%; } }
+  @media only screen and (max-width: 480px) {
+    .about-bucket .about-intro {
+      left: 13px;
+      top: 300px;
+      max-width: 390px;
+      height: 411px;
+      font-size: 16px;
+      line-height: 22px; }
+    .about-bucket .moi {
+      height: 200px;
+      width: 200px;
+      top: 100px; } }
 
 .menu-iconz {
   position: absolute;

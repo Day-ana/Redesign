@@ -345,7 +345,6 @@ header aside {
 /*STYLES FOR ABOUT ME PAGE*/
 /* line 334, ../sass/main.scss */
 .about-bucket {
-  font: italic 100 14px/150% Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,7 +356,7 @@ header aside {
   max-width: 40%;
   padding: 0 30px;
 }
-/* line 345, ../sass/main.scss */
+/* line 617, ../sass/main.scss */
 .about-bucket .moi {
   border: 1px solid yellow;
   text-indent: -9999px;
@@ -368,8 +367,8 @@ header aside {
   -moz-background-size: 100% 100%, auto;
   -webkit-background-size: 100% 100%, auto;
   background-size: 100% 100%, auto;
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   border: 1px solid yellow;
   border-radius: 50%;
 }
