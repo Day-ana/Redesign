@@ -342,8 +342,6 @@ header aside {
   }
 }
 /*STYLES FOR ABOUT ME PAGE*/
-/*STYLES FOR ABOUT ME PAGE*/
-/* line 334, ../sass/main.scss */
 .about-bucket {
   display: flex;
   align-items: center;
@@ -351,12 +349,10 @@ header aside {
   height: 100%;
   border: 1px solid #fff;
 }
-/* line 341, ../sass/main.scss */
 .about-bucket .about-intro {
   max-width: 40%;
   padding: 0 30px;
 }
-/* line 617, ../sass/main.scss */
 .about-bucket .moi {
   border: 1px solid yellow;
   text-indent: -9999px;

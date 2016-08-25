@@ -125,6 +125,12 @@ body {
     background: #28b58b;
     background-image: url("../img/bg_red.png"), url("../img/bg_red2.png");
     background-repeat: repeat-y, repeat;
+
+    @include media( "screen", "<minWidth" ){
+     
+    overflow: scroll;
+
+    };
 }
 .pt-page-4 {
     background: rgba(255, 0, 0, 0.63);
@@ -238,6 +244,14 @@ header{
            width: 250px;
           };
       }
+          @include media( "screen", "<minWidth" ){
+              .inner-bucket{
+                position: absolute;
+                top:610px;
+                font-size: 100%;
+              }
+          };
+
 
   }
 
@@ -276,6 +290,15 @@ header{
           @include media( "screen", ">minWidth", "<bp1Width" ){
             margin-top: 60px;
           };
+          /*SMALL*/
+          @include media( "screen", "<minWidth" ){
+            flex-flow: column nowrap;
+            align-items: center;
+            height: auto;
+            margin-top: 40px;
+          };
+
+
 
         div{
           width:33%;
@@ -290,12 +313,27 @@ header{
             width: 250px;
             height: 600px;
           };
-    
+          @include media( "screen", "<minWidth" ){
+              padding-top: 130px;
+          };
           h2{
             font-weight: lighter;
             text-align: center;
             font-size: 150%;
           }
+
+          /*SMALL*/
+          @include media( "screen", "<minWidth" ){
+           border:none;
+          width:80%;
+          margin-bottom: 200px;
+
+              p{
+                border-bottom: 1px solid rgba(189, 157, 9, 0.3);
+                padding-bottom: 30px;
+              }
+            
+          };
 
         }
 
@@ -308,8 +346,16 @@ header{
         .seo{
           background: url("../img/icon_seo.png") no-repeat center 25px;
         }
-
+                  /*SMALL*/
+        @include media( "screen", "<minWidth" ){
+          
+          .design, .development, .seo{
+            /*border-bottom: 1px solid rgba(189, 157, 9, 0.3);*/
+            background-position: 70px 10px;
+          }
+        }  
     }
+
 
 }
 
@@ -319,6 +365,7 @@ header{
     .control{
       width: 50%;
       font-weight: lighter;
+
       text-align: center;
       font-size: 420%;
       p{
@@ -333,7 +380,28 @@ header{
       background-size: 100%;
       width: 500px;
     }
-
+        /*MEDIUM*/
+    @include media( "screen", ">minWidth", "<bp1Width" ){
+      .control{
+        font-size: 300%;
+      }
+    };
+    /*SMALL*/
+    @include media( "screen", "<minWidth" ){
+        flex-flow: column nowrap;
+        align-items: center;
+        height: 600px;
+      .control{
+        width: 100%;
+        font-size: 200%;
+      }
+      .icomputer{
+        width: 80%;
+        height: 270px;
+        margin-top: -520px;
+      }
+      .link{margin:0 }
+    };
 
 }
 
@@ -368,6 +436,10 @@ header{
       @include media( "screen", "<minWidth" ){
           background-size: 200% 100%;
       };
+          /*SMALL*/
+      @include media( "screen", "<minWidth" ){
+          height: 1500px;
+      };
 
 }
 
@@ -392,10 +464,17 @@ header{
         @include media( "screen", ">minWidth", "<bp1Width" ){
           font-size: 40%;
           padding: 20px 0 0 0;
-          width: 130px;
+          width: 140px;
           margin: 20px 0;
         };
+        @include media( "screen", "<minWidth" ){
+          
+          font-size: 40%;
+          padding: 20px 0 0 0;
+          width: 140px;
+          margin: 20px -10px;
 
+        };
     }
     a:hover{
     background: rgba(0,0,0,0.4);
@@ -429,6 +508,11 @@ header{
     left: 0;
     text-align: center;
   }
+
+      /*SMALL*/
+    @include media( "screen", "<minWidth" ){
+      margin: 30px 0 0 34px;
+    };
 }
 
 .wipe, .slide, .opacity {
@@ -586,21 +670,49 @@ header{
       border:1px solid #fff;
       padding: 0 100px;
       .about-intro{
+        letter-spacing: 0.08em;
         max-width: 50%;
         padding: 30px;
         position: absolute;
         left:500px;
-        top:200px;
+        top:320px;
         line-height: 38px;
-        font-size: 24px;
+        font-size: 22px;
         border: 1px solid rgba(255, 0, 0, 0.28);
         background: rgba(0, 0, 0, 0.2);
         box-shadow: 1px 1px 60px 10px rgba(0, 0, 0, 0.29);
+        a{
+          color:red;
+          font-weight: 400;
+          display: block;
+          margin: 0  0 0 5px;
+        }
       } 
+      .socials{
+        position: absolute;
+        top: 683px;
+        border-bottom: 1px solid rgba(255, 0, 0, 0.28);
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 1px 60px 10px rgba(0, 0, 0, 0.29);
+        left: 150px;
+        width: 350px;
+        li{
+          display: inline-block;
+          width: 70px;
+          a{
+            color:#fff;
+            font-size: 25px;
+            &:hover{
+              color:#ff6d00;
+            }
+          }
+        }
+      }
+
       .moi{
         border:1px solid yellow;
         text-indent: -9999px;
-        background-image: url("../img/moi.jpg");
+        background-image: url("../img/moi.png");
         background-repeat:no-repeat;
         background-position:center center;
         -o-background-size: 100% 100%, auto;
@@ -621,11 +733,18 @@ header{
           @include media( "screen", ">minWidth", "<bp1Width" ){
               .about-intro{
                 left: 100px;
-                top: 400px;
+                top: 500px;
                 max-width: 80%;
-                height: 411px;
+                height: 500px;
                 font-size: 24px;
-                line-height: 26px;
+                line-height: 28px;
+              
+                  a{
+                      color:red;
+                      font-weight: 400;
+                      margin: 0  0 0 5px;
+                      letter-spacing: 0;
+                    }
               } 
               .moi{
               height: 300px;
@@ -633,22 +752,45 @@ header{
               top: 100px;
               left: 30%;
             }
-
+            .socials{
+            border-top: 1px solid rgba(255, 0, 0, 0.28);
+            border-bottom: none;
+            top: 440px;
+            left: 32%;
+            width: 272px;
+            }
           };
 
         @include media( "screen", "<minWidth" ){
               .about-intro{
                 left: 13px;
-                top: 300px;
+                top: 390px;
                 max-width: 390px;
                 height: 411px;
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 22px;
+
+              
+                  a{
+                      font-weight: 400;
+                      margin: 0  0 0 5px;
+                      background-color: yellow!important;
+                      height: 0;
+                    }
+
               } 
               .moi{
               height: 200px;
               width: 200px;
               top: 100px;
+            }
+
+            .socials{
+              border-top: 1px solid rgba(255, 0, 0, 0.28);
+              border-bottom: none;
+              top: 320px;
+              left: 16%;
+              width: 272px;
             }
       };
 
@@ -769,5 +911,14 @@ header{
     color: white;
   };
 }
+
+
+
+
+
+
+
+
+
 
 

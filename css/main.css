@@ -79,6 +79,9 @@ body {
   background: #28b58b;
   background-image: url("../img/bg_red.png"), url("../img/bg_red2.png");
   background-repeat: repeat-y, repeat; }
+  @media only screen and (max-width: 480px) {
+    .pt-page-3 {
+      overflow: scroll; } }
 
 .pt-page-4 {
   background: rgba(255, 0, 0, 0.63);
@@ -173,6 +176,11 @@ header {
     @media only screen and (min-width: 481px) and (max-width: 960px) {
       .lets-build-something .inner-bucket {
         width: 250px; } }
+  @media only screen and (max-width: 480px) {
+    .lets-build-something .inner-bucket {
+      position: absolute;
+      top: 610px;
+      font-size: 100%; } }
 
 .flex-bucket {
   display: flex;
@@ -202,10 +210,18 @@ header {
     /*background-image: url("../img/computer.png");*/
     font-weight: 100;
     letter-spacing: 0.1em;
-    /*MEDIUM*/ }
+    /*MEDIUM*/
+    /*SMALL*/
+    /*SMALL*/ }
     @media only screen and (min-width: 481px) and (max-width: 960px) {
       .flex-bucket .middle-bucket {
         margin-top: 60px; } }
+    @media only screen and (max-width: 480px) {
+      .flex-bucket .middle-bucket {
+        flex-flow: column nowrap;
+        align-items: center;
+        height: auto;
+        margin-top: 40px; } }
     .flex-bucket .middle-bucket div {
       width: 33%;
       border: 1px solid rgba(189, 157, 9, 0.3);
@@ -213,24 +229,42 @@ header {
       margin: 20px;
       padding-top: 210px;
       height: 500px;
-      /*MEDIUM*/ }
+      /*MEDIUM*/
+      /*SMALL*/ }
       @media only screen and (min-width: 481px) and (max-width: 960px) {
         .flex-bucket .middle-bucket div {
           width: 250px;
           height: 600px; } }
+      @media only screen and (max-width: 480px) {
+        .flex-bucket .middle-bucket div {
+          padding-top: 130px; } }
       .flex-bucket .middle-bucket div h2 {
         font-weight: lighter;
         text-align: center;
         font-size: 150%; }
+      @media only screen and (max-width: 480px) {
+        .flex-bucket .middle-bucket div {
+          border: none;
+          width: 80%;
+          margin-bottom: 200px; }
+          .flex-bucket .middle-bucket div p {
+            border-bottom: 1px solid rgba(189, 157, 9, 0.3);
+            padding-bottom: 30px; } }
     .flex-bucket .middle-bucket .design {
       background: url("../img/icon_design.png") no-repeat center 25px; }
     .flex-bucket .middle-bucket .development {
       background: url("../img/icon_dev.png") no-repeat center 25px; }
     .flex-bucket .middle-bucket .seo {
       background: url("../img/icon_seo.png") no-repeat center 25px; }
+    @media only screen and (max-width: 480px) {
+      .flex-bucket .middle-bucket .design, .flex-bucket .middle-bucket .development, .flex-bucket .middle-bucket .seo {
+        /*border-bottom: 1px solid rgba(189, 157, 9, 0.3);*/
+        background-position: 70px 10px; } }
 
 .bottom-bucket {
-  height: 500px; }
+  height: 500px;
+  /*MEDIUM*/
+  /*SMALL*/ }
   .bottom-bucket .control {
     width: 50%;
     font-weight: lighter;
@@ -244,6 +278,23 @@ header {
     background: url("../img/icomputer_1.png") no-repeat center top;
     background-size: 100%;
     width: 500px; }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .bottom-bucket .control {
+      font-size: 300%; } }
+  @media only screen and (max-width: 480px) {
+    .bottom-bucket {
+      flex-flow: column nowrap;
+      align-items: center;
+      height: 600px; }
+      .bottom-bucket .control {
+        width: 100%;
+        font-size: 200%; }
+      .bottom-bucket .icomputer {
+        width: 80%;
+        height: 270px;
+        margin-top: -520px; }
+      .bottom-bucket .link {
+        margin: 0; } }
 
 .footer {
   margin: 0;
@@ -265,13 +316,17 @@ header {
   background-size: 100% 100%;
   box-shadow: #421700 21px 10px 92px;
   border-bottom: 1px solid rgba(252, 189, 96, 0.46);
-  /*MEDIUM*/ }
+  /*MEDIUM*/
+  /*SMALL*/ }
   @media only screen and (min-width: 481px) and (max-width: 960px) {
     .digital-background {
       background-size: 200% 100%; } }
   @media only screen and (max-width: 480px) {
     .digital-background {
       background-size: 200% 100%; } }
+  @media only screen and (max-width: 480px) {
+    .digital-background {
+      height: 1500px; } }
 
 .main-button {
   width: 260px;
@@ -294,8 +349,14 @@ header {
       .main-button a {
         font-size: 40%;
         padding: 20px 0 0 0;
-        width: 130px;
+        width: 140px;
         margin: 20px 0; } }
+    @media only screen and (max-width: 480px) {
+      .main-button a {
+        font-size: 40%;
+        padding: 20px 0 0 0;
+        width: 140px;
+        margin: 20px -10px; } }
   .main-button a:hover {
     background: rgba(0, 0, 0, 0.4);
     color: #FBAF0B; }
@@ -314,7 +375,8 @@ header {
   text-align: center;
   font-size: 1.2rem;
   margin: 10px;
-  position: relative; }
+  position: relative;
+  /*SMALL*/ }
   .link span {
     position: absolute;
     height: 100%;
@@ -322,6 +384,9 @@ header {
     top: 0;
     left: 0;
     text-align: center; }
+  @media only screen and (max-width: 480px) {
+    .link {
+      margin: 30px 0 0 34px; } }
 
 .wipe, .slide, .opacity {
   border: 2px solid #fff;
@@ -441,20 +506,42 @@ header {
   padding: 0 100px;
   /*MEDIUM*/ }
   .about-bucket .about-intro {
+    letter-spacing: 0.08em;
     max-width: 50%;
     padding: 30px;
     position: absolute;
     left: 500px;
-    top: 200px;
+    top: 320px;
     line-height: 38px;
-    font-size: 24px;
+    font-size: 22px;
     border: 1px solid rgba(255, 0, 0, 0.28);
     background: rgba(0, 0, 0, 0.2);
     box-shadow: 1px 1px 60px 10px rgba(0, 0, 0, 0.29); }
+    .about-bucket .about-intro a {
+      color: red;
+      font-weight: 400;
+      display: block;
+      margin: 0  0 0 5px; }
+  .about-bucket .socials {
+    position: absolute;
+    top: 683px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.28);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 60px 10px rgba(0, 0, 0, 0.29);
+    left: 150px;
+    width: 350px; }
+    .about-bucket .socials li {
+      display: inline-block;
+      width: 70px; }
+      .about-bucket .socials li a {
+        color: #fff;
+        font-size: 25px; }
+        .about-bucket .socials li a:hover {
+          color: #ff6d00; }
   .about-bucket .moi {
     border: 1px solid yellow;
     text-indent: -9999px;
-    background-image: url("../img/moi.jpg");
+    background-image: url("../img/moi.png");
     background-repeat: no-repeat;
     background-position: center center;
     -o-background-size: 100% 100%, auto;
@@ -472,28 +559,50 @@ header {
   @media only screen and (min-width: 481px) and (max-width: 960px) {
     .about-bucket .about-intro {
       left: 100px;
-      top: 400px;
+      top: 500px;
       max-width: 80%;
-      height: 411px;
+      height: 500px;
       font-size: 24px;
-      line-height: 26px; }
+      line-height: 28px; }
+      .about-bucket .about-intro a {
+        color: red;
+        font-weight: 400;
+        margin: 0  0 0 5px;
+        letter-spacing: 0; }
     .about-bucket .moi {
       height: 300px;
       width: 300px;
       top: 100px;
-      left: 30%; } }
+      left: 30%; }
+    .about-bucket .socials {
+      border-top: 1px solid rgba(255, 0, 0, 0.28);
+      border-bottom: none;
+      top: 440px;
+      left: 32%;
+      width: 272px; } }
   @media only screen and (max-width: 480px) {
     .about-bucket .about-intro {
       left: 13px;
-      top: 300px;
+      top: 390px;
       max-width: 390px;
       height: 411px;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 22px; }
+      .about-bucket .about-intro a {
+        font-weight: 400;
+        margin: 0  0 0 5px;
+        background-color: yellow !important;
+        height: 0; }
     .about-bucket .moi {
       height: 200px;
       width: 200px;
-      top: 100px; } }
+      top: 100px; }
+    .about-bucket .socials {
+      border-top: 1px solid rgba(255, 0, 0, 0.28);
+      border-bottom: none;
+      top: 320px;
+      left: 16%;
+      width: 272px; } }
 
 .menu-iconz {
   position: absolute;

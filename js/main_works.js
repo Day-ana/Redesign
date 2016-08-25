@@ -129,7 +129,8 @@
 			clickEvent = (document.ontouchstart!==null ? 'click' : 'touchstart');
 		
 		//Instantiating custom Variable
-		var pageContainer = document.getElementById('worksPageHideScroll');
+		// var pageContainer = document.getElementById('worksPageHideScroll');
+
 
 		this.items.forEach(function(item) {
 			var touchend = function(ev) {
@@ -148,7 +149,9 @@
 			item.addEventListener(clickEvent, function(ev) {
 
 			//Removing scroll on Click - Custom functionality
-			pageContainer.style.overflow = "hidden";
+			// pageContainer.style.overflow = "hidden";
+			// console.log(pageContainer);
+
 
 			//Calling the hover mechanics	
 			// updateFromThumby(item);
