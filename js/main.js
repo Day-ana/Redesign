@@ -43,7 +43,6 @@
                 });
 
                 //Simulate click
-                        
                 var lateClick = setTimeout(function(){
                     openbtn.click();
                 },1000)
@@ -54,7 +53,7 @@
         }
 
         if(mobilecheck()){
-            console.log("Fuck yes I'm mobile lets do");
+            console.log("Yo soy mobile");
             classie.add(bodyEl, 'show-menu');
 
         }

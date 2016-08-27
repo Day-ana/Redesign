@@ -21,15 +21,24 @@
 <![endif]-->
 </head>
 <body>
+
 <div id="loading-overlay">
-    <!-- Loading Screen -->
-    <ul id="loader">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    <ul>
+    <div class="loader-wrapper">
+        <div class="loader">
+        <div class="roller"></div>
+        <div class="roller"></div>
+      </div>
+      
+      <div id="loader2" class="loader">
+        <div class="roller"></div>
+        <div class="roller"></div>
+      </div>
+      
+      <div id="loader3" class="loader">
+        <div class="roller"></div>
+        <div class="roller"></div>
+      </div>
+    </div>
 </div>
  <!--Start container-->   
 <div class="container">    
@@ -277,56 +286,32 @@
                 <source src="assets/OceanBG.mp4" type="video/mp4">
             </video>
             <div class="flex-bucket-contact">
+            <div class="flex-bucket-contact">
                 <div id="video-bucket" class="contact-bucket">
-
-                    <div class="col-md-8">
-                        <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-field">
-                                        <input type="text" name="name" class="validate" id="name">
-                                        <label for="name">Name</label>
-                                    </div>
-
-                                </div><!-- /.col-md-6 -->
-
-                                <div class="col-md-6">
-                                    <div class="input-field">
-                                        <label class="sr-only" for="email">Email</label>
-                                        <input id="email" type="email" name="email" class="validate" >
-                                        <label for="email" data-error="wrong" data-success="right">Email</label>
-                                    </div>
-                                </div><!-- /.col-md-6 -->
-                            </div><!-- /.row -->
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-field">
-                                        <input id="phone" type="tel" name="phone" class="validate" >
-                                        <label for="phone">Phone Number</label>
-                                    </div>
-                                </div><!-- /.col-md-6 -->
-
-                                <div class="col-md-6">
-                                    <div class="input-field">
-                                        <!-- <input id="website" type="text" name="website" class="validate" > -->
-                                        <!-- <label for="website">Your Website</label> -->
-                                    </div>
-                                </div><!-- /.col-md-6 -->
-                            </div><!-- /.row -->
-
-                            <div class="input-field">
-                                <textarea name="message" id="message" class="materialize-textarea" ></textarea>
-                                <label for="message">Message</label>
+                    <form class="contact-form" id="contact-form">
+                            <div >
+                                <p class="font02">Wanna chat about a project or just say hi?</p>
+                                <p class="font02">
+                                    <label for="name">Name : </label>
+                                    <input type="text" id="name" autofocus>
+                                </p>
+                                <p class="font02">
+                                    <label for="email">E-mail : </label>
+                                    <input type="email" id="email">
+                                </p>
+                                <p><small>Chatter, oh the possibilities!</small></p>
+                                <p>
+                                    <input type="submit" value="Send it!">
+                                </p>
                             </div>
-
-                            <button type="submit" name="submit" class="waves-effect waves-light btn submit-button mt-30 mb-sm-30">Send Message</button>
-                        </form>
-                    </div><!-- /.col-md-8 -->
-
-                    <button class="font02">Clickit.</button>
-                </div>
+                            <div>
+                            <p class="font02">Drop me a line.</p>
+                            <textarea name="" id="" cols="10" rows="5"></textarea>
+                            </div>
+                    </form>
+                        <!-- <button class="font02">Clickit.</button> -->
+                    </div>
+                </div> 
             </div>    
         </div>
         <!--End Contact Page-->
