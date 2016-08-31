@@ -85,13 +85,20 @@ body {
   background: #28b58b;
   background-image: url("../img/bg_red.png"), url("../img/bg_red2.png");
   background-repeat: repeat-y, repeat; }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .pt-page-3 {
+      overflow-y: scroll; } }
   @media only screen and (max-width: 480px) {
     .pt-page-3 {
-      overflow: scroll; } }
+      overflow-y: scroll; } }
 
 .pt-page-4 {
   background: rgba(255, 0, 0, 0.63);
   /*background: url("../img/bg_video.png") #000 no-repeat center center fixed;*/ }
+  @media only screen and (max-width: 480px) {
+    .pt-page-4 {
+      /*border-bottom:2px solid fuchsia;*/
+      overflow-y: scroll; } }
 
 .pt-page-5 {
   background: #28b58b;
@@ -836,6 +843,15 @@ header {
     .flex-bucket-contact .contact-bucket p {
       text-align: left;
       letter-spacing: 0.05em; }
+    @media only screen and (min-width: 481px) and (max-width: 960px) {
+      .flex-bucket-contact .contact-bucket p {
+        float: left; }
+        .flex-bucket-contact .contact-bucket p label {
+          width: 75px; }
+        .flex-bucket-contact .contact-bucket p input {
+          width: 70%; }
+        .flex-bucket-contact .contact-bucket p input[type=submit] {
+          width: 95%; } }
 
 /*Responsive contact page*/
 @media only screen and (min-width: 961px) and (max-width: 1260px) {

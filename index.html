@@ -55,8 +55,8 @@
                     <a href="javascript:void(0)" class="pt-trigger" data-animation="10" data-goto="1"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
                     <a href="javascript:void(0)" class="pt-trigger" data-animation="11" data-goto="2"><i class="fa fa-fw fa-desktop"></i><span>Works</span></a>
                     <a href="javascript:void(0)" class="pt-trigger" data-animation="12" data-goto="3"><i class="fa fa-fw fa-user"></i><span>About</span></a>
-                    <a href="javascript:void(0)" class="pt-trigger" data-animation="13" data-goto="4"><i class="fa fa-fw fa-comment-o"></i><span>Contact</span></a>
-                    <!-- <a href="javascript:void(0)" class="pt-trigger" data-animation="14" data-goto="5"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a> -->
+                    <a href="javascript:void(0)"class="pt-trigger" data-animation="13" data-goto="4"><i class="fa fa-fw fa-comment-o"></i><span>Contact</span></a>
+                    <!-- <a href="javascript:void(0)" id="click-menu" class="pt-trigger" data-animation="14" data-goto="5"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a> -->
                     <!-- <a href="javascript:void(0)" class="pt-trigger" data-animation="14" data-goto="6"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a> -->
                     <!-- Emmet Snippet -->
                     <!-- ul>li.item$*3 -->
@@ -286,33 +286,33 @@
                 <source src="assets/OceanBG.mp4" type="video/mp4">
             </video>
             <div class="flex-bucket-contact">
-            <div class="flex-bucket-contact">
-                <div id="video-bucket" class="contact-bucket">
-                    <form class="contact-form" id="contact-form">
-                            <div >
-                                <p class="font02">Wanna chat about a project or just say hi?</p>
+            <div id="wrap">
+            <div id="video-bucket" class="contact-bucket">
+                    <form class="contact-form" id="commentForm" action="javascript:alert('success!');">
+                            <div>
+                                <p class="font02">Wanna chat about the universe?</p>
                                 <p class="font02">
-                                    <label for="name">Name : </label>
-                                    <input type="text" id="name" autofocus>
+                                    <label for="cname">Name: </label>
+                                    <input id="cname" name="name" minlength="2" type="text" required />
                                 </p>
                                 <p class="font02">
-                                    <label for="email">E-mail : </label>
-                                    <input type="email" id="email">
+                                    <label for="email">E-mail: </label>
+                                    <input id="cemail" type="email" name="email" required/>
                                 </p>
                                 <p><small>Chatter, oh the possibilities!</small></p>
                                 <p>
-                                    <input type="submit" value="Send it!">
+                                    <input type="submit" name ="submit" value="Send it!">
                                 </p>
                             </div>
                             <div>
                             <p class="font02">Drop me a line.</p>
-                            <textarea name="" id="" cols="10" rows="5"></textarea>
+                            <textarea  id="ccomment" name="message" required ></textarea>
+                             <p id="formstatus"></p>
                             </div>
                     </form>
+            </div> 
+            </div> 
                         <!-- <button class="font02">Clickit.</button> -->
-                    </div>
-                </div> 
-            </div>    
         </div>
         <!--End Contact Page-->
     </div>
@@ -332,6 +332,8 @@
 <script src="js/imagesloaded.pkgd.min.js"></script>
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/main_works.js"></script>
+
+<script src="js/jquery.validate.js"></script>
 
 <script>
 (function() {
@@ -397,10 +399,43 @@ new GridFx(document.querySelector('.grid'), {
             [].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
                 var svgicon = new svgIcon( el, svgIconConfig );
             } );
-
             new svgIcon( document.querySelector( '.si-icons-easing .si-icon-hamburger-cross' ), svgIconConfig, { easing : mina.elastic, speed: 600 } );
     })();
 </script>
+<script>
+    /* <![CDATA[ */
+            $(document).ready(function(){ // sends the data filled in the contact form to the php file and shows a message
+            $("#commentForm").submit(function(){
+                var str = $(this).serialize();
+                console.log(str);
+                $.ajax({
+                   type: "POST",
+                   url: "./php/send.php",
+                   data: str,
+                   success: function(msg)
+                   {
+
+                     console.log(msg);
+
+                     $( document).ajaxComplete(function(event, request, settings){
+                            if(msg == 'OK'){ // Message Sent? Show the 'Thank You' message and hide the form
+                                result = '<div class="formstatusok">Your message has been sent. Thank you!</div>';
+                                $("#commentForm").closest('form').find("input[type=text], input[type=email], textarea").val("");
+                            }
+                            else{
+                                result = msg;
+                            }
+                            $("#formstatus").html(result);
+                        });
+                    }
+                
+                 });
+                return false;
+            });
+        });
+    /* ]]> */   
+</script>
+
 <!-- <script>
     $('.img-wrap').click(function() {
     $('.pt-page-2').animate({scrollTop: $(this).offset(0).top}, 200);

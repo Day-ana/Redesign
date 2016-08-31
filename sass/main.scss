@@ -137,16 +137,29 @@ body {
     background-image: url("../img/bg_red.png"), url("../img/bg_red2.png");
     background-repeat: repeat-y, repeat;
 
+    @include media( "screen", ">minWidth", "<bp1Width" ){
+    
+      overflow-y: scroll;
+    
+    };
+
     @include media( "screen", "<minWidth" ){
      
-    overflow: scroll;
+      overflow-y: scroll;
 
     };
+
+
 }
 .pt-page-4 {
     background: rgba(255, 0, 0, 0.63);
     /*background: url("../img/bg_video.png") #000 no-repeat center center fixed;*/
+    @include media( "screen", "<minWidth" ){
+     
+    /*border-bottom:2px solid fuchsia;*/
+      overflow-y: scroll;
 
+    };
 }
 .pt-page-5 {
     background: #28b58b;
@@ -1002,7 +1015,14 @@ header{
     border:1px solid rgba(141, 150, 0, 0.45);
     border-bottom:none;
     p{ text-align:left; letter-spacing:0.05em;}
-
+      @include media( "screen", ">minWidth", "<bp1Width" ){
+       p{
+        float: left; 
+          label{width:75px;}
+          input{ width: 70%;}
+          input[type=submit]{ width: 95%;}
+        }
+      };
   }
 }
 

@@ -816,8 +816,6 @@ figure.expand {
     transform: scale(2);
 }
 
-/*@import url(http://fonts.googleapis.com/css?family=Nunito);*/
-
 
 .pt-page-3 {
     padding: 0px;
@@ -838,5 +836,9 @@ figure.expand {
   background-repeat: no-repeat;
 }
 
-
-
+#formstatus{   
+    border: 1px solid rgba(210, 69, 69, 0.39);
+    display: block;
+    width: 100%;
+    line-height: 45px;   
+    padding: 0 30px;}

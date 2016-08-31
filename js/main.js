@@ -78,7 +78,7 @@
             } else {
                 classie.add(bodyEl, 'show-menu');
                 // $('.menu-button').fadeOut(400);
-                console.log(isOpen); //false
+                // console.log(isOpen); //false
 
             }
             isOpen = !isOpen;
