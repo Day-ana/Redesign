@@ -136,18 +136,7 @@ body {
     background: #28b58b;
     background-image: url("../img/bg_red.png"), url("../img/bg_red2.png");
     background-repeat: repeat-y, repeat;
-
-    @include media( "screen", ">minWidth", "<bp1Width" ){
-    
-      overflow-y: scroll;
-    
-    };
-
-    @include media( "screen", "<minWidth" ){
-     
-      overflow-y: scroll;
-
-    };
+    overflow-y: scroll;
 
 
 }

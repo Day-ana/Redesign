@@ -129,7 +129,7 @@
 
     <!--Start Second Page-->
     <div class="pt-page pt-page-2" id="worksPageHideScroll">
-        <h1>works</h1>
+        <!-- <h1>works</h1> -->
         <div class="content">
             <div class="grid">
                 <div class="grid__item" data-size="1280x1280">
@@ -415,9 +415,7 @@ new GridFx(document.querySelector('.grid'), {
                    success: function(msg)
                    {
 
-                     console.log(msg);
-
-                     $( document).ajaxComplete(function(event, request, settings){
+                     $(document).ajaxComplete(function(event, request, settings){
                             if(msg == 'OK'){ // Message Sent? Show the 'Thank You' message and hide the form
                                 result = '<div class="formstatusok">Your message has been sent. Thank you!</div>';
                                 $("#commentForm").closest('form').find("input[type=text], input[type=email], textarea").val("");
@@ -435,7 +433,16 @@ new GridFx(document.querySelector('.grid'), {
         });
     /* ]]> */   
 </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-38905417-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <!-- <script>
     $('.img-wrap').click(function() {
     $('.pt-page-2').animate({scrollTop: $(this).offset(0).top}, 200);
