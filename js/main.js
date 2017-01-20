@@ -1,21 +1,10 @@
 (function() {
 
-    //Waiting for document to load
-    var waitingToLoad = setInterval(function() {
-        if (document.readyState == "complete")
-        //ok we loaded lets proceed
-            okIReloaded();
-
-    }, 600);
-
-
     function okIReloaded() {
 
-        clearInterval(waitingToLoad);
+        // clearInterval(waitingToLoad);
         document.getElementById("loading-overlay").style.display = "none";
 
-        // $(".loading-overlay").css("display", "none")
-        // $("#loader").css("display", "none")
 
         var bodyEl = document.body,
             content = document.querySelector('.content-wrap'),
@@ -32,8 +21,6 @@
 
         function init() {
               openbtn.addEventListener('click', toggleMenu);
-            // console.log(openbtn.previousElementSibling + " test");
-            // openbtn.parentNode.removeChild(openbtn);
             // close the menu element if the target it´s not the menu element or one of its descendants..
                 content.addEventListener('click', function(ev) {
                     var target = ev.target;
@@ -73,40 +60,15 @@
         function toggleMenu() {
             if (isOpen) {
                 classie.remove(bodyEl, 'show-menu');
-                // $('.menu-button').css("display", "block");
 
             } else {
                 classie.add(bodyEl, 'show-menu');
-                // $('.menu-button').fadeOut(400);
-                // console.log(isOpen); //false
 
             }
             isOpen = !isOpen;
         }
 
         init();
-
-        // var stackedMenu = document.getElementsByClassName("menu-button");
-        // stackedMenu.style.display="none";
-
-        // var timeOut = setTimeout(function() {
-
-        //     $("#open-button").click()
-
-        //     var secondTime = setTimeout(function() {
-
-        //         //Trigger a specific page
-        //         // $('.pt-trigger:eq( 0 )').click()
-        //         //GSAP
-
-        //     }, 200)
-
-        //     // $("#open-button").find( " ")
-        //     // body...
-        // }, 100)
-
-        // var ContentArray = ["work", "play" ,"about", "contact"]
-        // console.log(ContentArray);
 
         //Video Content
         var vid = document.getElementById("bgvid");
@@ -133,13 +95,6 @@
                 pauseButton.innerHTML = "Play";
             }
         })
-        //Tween for Nav
-        // TweenMax.staggerFrom(".btn", 0.2, {
-        //     scale: 0.5,
-        //     opacity: 0.1,
-        //     delay: 1.0,
-        //     ease: Elastic.eastOut
-        // }, 0.3);
 
         //Tween for Nav
         TweenMax.staggerFrom(".intro-buttons", 1, {
@@ -151,6 +106,12 @@
         }, 0.4);
 
     };
+
+    var delay = setTimeout(function(){
+        okIReloaded();
+    
+    }, 1500)
+
 
 
 })();
